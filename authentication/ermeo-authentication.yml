@@ -1,0 +1,52 @@
+generated: '2026-07-19'
+method: searched
+source: https://support.en.ermeo.com/login-to-ermeo-api-and-send-requests
+docs: https://support.en.ermeo.com/login-to-ermeo-api-and-send-requests
+summary:
+  types:
+  - oauth2
+  api_key_in: []
+  oauth2_flows:
+  - password
+  - refreshToken
+  token_type: Bearer
+schemes:
+- name: OAuth2
+  type: oauth2
+  description: >-
+    Ermeo secures every API request with an OAuth 2.0 access token passed in the
+    Authorization header as "Bearer {access_token}". Credentials (client_id and
+    client_secret) are issued by the Ermeo team together with a test environment.
+  token_url: https://api.ermeo.com/oauth/v2/token
+  flows:
+  - flow: password
+    grant_type: password
+    token_url: https://api.ermeo.com/oauth/v2/token
+    parameters:
+    - client_id
+    - client_secret
+    - grant_type=password
+    - username
+    - password
+  - flow: refreshToken
+    grant_type: refresh_token
+    token_url: https://api.ermeo.com/oauth/v2/token
+    parameters:
+    - client_id
+    - client_secret
+    - grant_type=refresh_token
+    - refresh_token
+  sources:
+  - https://support.en.ermeo.com/login-to-ermeo-api-and-send-requests
+tokens:
+  access_token:
+    header: 'Authorization: Bearer {access_token}'
+    lifetime_seconds: 7200
+  refresh_token:
+    lifetime: 2 weeks
+    single_use: true
+    note: A refresh token may be used once to obtain a new access token.
+notes:
+- Base URL for the API is https://api.ermeo.com
+- No OAuth scope reference is published in the documentation; access is governed by
+  the authenticated user's account permissions rather than granular OAuth scopes.
