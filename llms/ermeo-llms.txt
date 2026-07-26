@@ -1,0 +1,29 @@
+# Ermeo
+
+> Ermeo (rebranded Causeway Field) is a French connected-operator / field-operations SaaS platform that digitizes paper procedures into dynamic, interactive workflows for inspections, maintenance, and interventions. Operators complete pre-built forms on mobile and capture equipment and report data in the field in real time; managers monitor field work from a central console. Ermeo exposes a REST API secured with OAuth 2.0 so customers can connect their information systems (CMMS, MES, EDM) to import and synchronize equipment, forms, and reports.
+
+## API
+
+- [Ermeo API reference (Stoplight)](https://ermeo.stoplight.io/): REST API, OAuth 2.0 Bearer auth, base URL https://api.ermeo.com
+- [Authenticate and send requests](https://support.en.ermeo.com/login-to-ermeo-api-and-send-requests): OAuth 2.0 password + refresh_token grants, token endpoint https://api.ermeo.com/oauth/v2/token
+
+## Docs
+
+- [Help Center](https://support.en.ermeo.com/): product documentation and support articles
+- [Getting started with Ermeo](https://support.en.ermeo.com/getting-started-with-ermeo)
+- [Connect your information system to Ermeo](https://support.en.ermeo.com/connect-your-is-to-ermeo): CMMS / MES / EDM integration
+- [Blog](https://www.ermeo.com/en/blog/)
+
+## Artifacts
+
+- [Authentication profile](authentication/ermeo-authentication.yml): OAuth 2.0, Bearer, token lifetimes
+- [API conventions](conventions/ermeo-conventions.yml): auth style, media types, versioning
+- [Lifecycle](lifecycle/ermeo-lifecycle.yml): versioning v2.0, ownership (acquired by Causeway)
+- [Conformance](conformance/ermeo-conformance.yml): standards posture
+- [Well-known index](well-known/ermeo-well-known.yml)
+- [Domain security probe](security/ermeo-domain-security.yml)
+
+## Notes
+
+- Ermeo was acquired by Causeway Technologies and is being rebranded "Causeway Field"; the API is still served from api.ermeo.com.
+- No public first-party SDK/CLI, MCP server, sandbox, OpenAPI download, webhooks, or /.well-known/ discovery documents were found as of 2026-07-19.

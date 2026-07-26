@@ -1,0 +1,21 @@
+generated: '2026-07-19'
+method: derived
+source: https://support.en.ermeo.com/login-to-ermeo-api-and-send-requests
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    API authenticates with OAuth 2.0 access tokens (password + refresh_token grants)
+    via https://api.ermeo.com/oauth/v2/token, Bearer authorization header.
+- id: oidc
+  conforms: false
+  evidence: No /.well-known/openid-configuration discovery document is published.
+- id: rfc8414-oauth-authorization-server
+  conforms: false
+  evidence: No /.well-known/oauth-authorization-server metadata is published.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No application/problem+json error envelope is advertised in the docs.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: No /.well-known/security.txt on any Ermeo host (see well-known/).

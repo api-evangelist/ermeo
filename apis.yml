@@ -1,8 +1,27 @@
 aid: ermeo
 name: Ermeo
-description: 'Ermeo is a company surfaced as a portfolio company of partech and added to the API Evangelist
-  network as a stub for enrichment. Sector: Applicative SaaS. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Ermeo (rebranded Causeway Field) is a French connected-operator / field-operations
+  SaaS platform that lets industrial and field teams digitize paper procedures into
+  dynamic, interactive workflows for inspections, maintenance, and interventions.
+  Operators complete pre-built interactive forms on mobile, capture equipment and
+  report data in the field in real time, and operational managers monitor all field
+  work from a central console. Ermeo exposes a REST API secured with OAuth 2.0 so
+  customers can connect their information systems (CMMS, MES, EDM) to import and
+  synchronize equipment, forms, and reports and enrich the data collected in the field.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.ermeo.com/en/
 url: https://raw.githubusercontent.com/api-evangelist/ermeo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +29,37 @@ x-backed-by:
 - partech
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-acquired-by: Causeway Technologies
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-- Applicative Saas
-apis: []
+- Field Service Management
+- Connected Operator
+- Field Operations
+- Industrial
+- Maintenance
+- Inspections
+- SaaS
+apis:
+- name: Ermeo API
+  description: >-
+    REST API for the Ermeo connected-operator platform. Authenticated with OAuth 2.0
+    (Bearer access tokens), it lets external systems read and write equipment, forms,
+    reports, and field data so customers can integrate Ermeo with their CMMS, MES,
+    and EDM information systems.
+  humanURL: https://ermeo.stoplight.io/
+  baseURL: https://api.ermeo.com
+  tags:
+  - API
+  - Field Operations
+  - OAuth2
+  properties:
+  - type: APIReference
+    url: https://ermeo.stoplight.io/
+  - type: Authentication
+    url: authentication/ermeo-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,4 +67,33 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://www.ermeo.com/
+  url: https://www.ermeo.com/en/
+- type: APIReference
+  url: https://ermeo.stoplight.io/
+- type: Documentation
+  url: https://support.en.ermeo.com/login-to-ermeo-api-and-send-requests
+- type: GettingStarted
+  url: https://support.en.ermeo.com/getting-started-with-ermeo
+- type: Support
+  url: https://support.en.ermeo.com/
+- type: Blog
+  url: https://www.ermeo.com/en/blog/
+- type: Authentication
+  url: authentication/ermeo-authentication.yml
+- type: Conventions
+  url: conventions/ermeo-conventions.yml
+- type: Lifecycle
+  url: lifecycle/ermeo-lifecycle.yml
+- type: Conformance
+  url: conformance/ermeo-conformance.yml
+- type: WellKnown
+  url: well-known/ermeo-well-known.yml
+- type: DomainSecurity
+  url: security/ermeo-domain-security.yml
+- type: LLMsTxt
+  url: llms/ermeo-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

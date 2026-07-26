@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: https://ermeo.stoplight.io/
+versioning:
+  scheme: uri-path
+  current: v2.0
+  docs: https://ermeo.stoplight.io/
+  note: >-
+    The current API reference is hosted on Stoplight and labelled version 2.0. An
+    older 2.0 reference formerly lived at ermeo.api-docs.io (now retired/redirected).
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: No formal deprecation policy or RFC 8594 Sunset/Deprecation header support is
+    documented publicly.
+sla:
+  url: null
+status_page: null
+ownership:
+  note: >-
+    Ermeo was acquired by Causeway Technologies and the product is being rebranded
+    as "Causeway Field" / "CausewayOne Field"; the API continues to be served from
+    api.ermeo.com with documentation on ermeo.stoplight.io.
+deprecated_operations: []

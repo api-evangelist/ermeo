@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://support.en.ermeo.com/login-to-ermeo-api-and-send-requests
+docs: https://ermeo.stoplight.io/
+base_url: https://api.ermeo.com
+authentication:
+  style: oauth2-bearer
+  header: 'Authorization: Bearer {access_token}'
+  token_endpoint: https://api.ermeo.com/oauth/v2/token
+  grant_types: [password, refresh_token]
+  access_token_lifetime_seconds: 7200
+  refresh_token_lifetime: 2 weeks (single use)
+  ref: authentication/ermeo-authentication.yml
+media_type:
+  request: application/json
+  response: application/json
+idempotency:
+  supported: unknown
+  note: No idempotency-key header or contract is documented in the public Ermeo API docs.
+pagination:
+  style: unknown
+  note: Pagination conventions are documented per-route in the Stoplight reference;
+    no single global scheme is published in the getting-started material.
+versioning:
+  scheme: uri-path
+  current: v2.0
+  note: The API reference is labelled version 2.0; see lifecycle/ermeo-lifecycle.yml.
+error_envelope:
+  format: unknown
+  note: Error response shapes are documented per-route in the Stoplight reference;
+    no global RFC 9457 problem+json envelope is advertised.
+rate_limiting:
+  documented: false
+cross_links:
+  authentication: authentication/ermeo-authentication.yml
+  lifecycle: lifecycle/ermeo-lifecycle.yml
+  well_known: well-known/ermeo-well-known.yml
