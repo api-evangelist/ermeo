@@ -41,6 +41,15 @@ tags:
 - Industrial
 - Maintenance
 - Inspections
+- Software-as-a-Service
+tags_raw:
+- Company
+- Field Service Management
+- Connected Operator
+- Field Operations
+- Industrial
+- Maintenance
+- Inspections
 - SaaS
 apis:
 - name: Ermeo API
@@ -52,6 +61,9 @@ apis:
   humanURL: https://ermeo.stoplight.io/
   baseURL: https://api.ermeo.com
   tags:
+  - Field Operations
+  - Authentication
+  tags_raw:
   - API
   - Field Operations
   - OAuth2
