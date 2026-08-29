@@ -9,6 +9,17 @@ description: >-
   work from a central console. Ermeo exposes a REST API secured with OAuth 2.0 so
   customers can connect their information systems (CMMS, MES, EDM) to import and
   synchronize equipment, forms, and reports and enrich the data collected in the field.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
